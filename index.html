@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Badar Public School Kohat</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/schoollogo.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"></div>
+            
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.tab-button');
+            const panes = document.querySelectorAll('.tab-pane');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-tab');
+
+                    buttons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    panes.forEach(pane => {
+                        if (pane.id === target) {
+                            pane.style.display = 'flex'; // Show the selected tab content
+                        } else {
+                            pane.style.display = 'none'; // Hide other tab content
+                        }
+                    });
+                });
+            });
+
+            // Initialize the first tab
+            buttons[0].click();
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+
+
+
+
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="./video/3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1 >Anything is <br> Possible. </h1>
+    </div>
+
+
+
+    <div class="mainaboutdiv">
+        <div  class="aboutimg">
+        
+            <video autoplay muted loop id="overlay-video">
+                <source src="./video/2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div  data-aos="fade-right" class="allcontent">
+            <h4>About Us</h4>
+            <p>
+                Embark on your child's educational journey with Al Badar Public School's innovative teaching methods and
+                holistic approach. Our dedicated educators nurture each student's potential, fostering creativity,
+                critical thinking, and a lifelong love of learning. We are committed to empowering your child to thrive
+                in a competitive world. Join our community where every child is valued and inspired to excel.
+
+                Our doors are open to your child. Call us today at <strong>0922520574.</strong> 
+            </p>
+            
+        </div>
+    </div>
+
+
+    <div  data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" class="cards-container">
+        <div  class="card">
+            <img src="./img/5.jpg" alt="Education" class="card-img">
+            <div class="card-content">
+                <h2>Education Strong</h2>
+                <p>Our educational programs are designed to foster a strong foundation for students, encouraging academic excellence and personal growth.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/17.jpg" alt="Sport" class="card-img">
+            <div class="card-content">
+                <h2>Sport</h2>
+                <p>We believe in the importance of physical fitness and teamwork. Our sports programs are designed to keep students active and engaged.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/15.jpg" alt="Canteen" class="card-img">
+            <div class="card-content">
+                <h2>Canteen</h2>
+                <p>Our canteen offers a variety of healthy and nutritious meals, ensuring students stay energized and focused throughout the day.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div  data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" class="tabs-container">
+        <div class="tabs">
+            <button class="tab-button" data-tab="education">Education</button>
+            <button class="tab-button" data-tab="sports">Sports</button>
+            <button class="tab-button" data-tab="party">Party/Farewell</button>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane" id="education">
+                <img src="./img/1.jpg" alt="Education 1">
+                <img src="./img/2.jpg" alt="Education 1">
+                <img src="./img/3.jpg" alt="Education 1">
+                <img src="./img/4.jpg" alt="Education 1">
+                <img src="./img/5.jpg" alt="Education 1">
+                <img src="./img/37.jpg" alt="Education 1">
+                <img src="./img/38.jpg" alt="Education 1">
+                <img src="./img/39.jpg" alt="Education 1">
+            </div>
+            <div class="tab-pane" id="sports">
+                <img src="./img/11.jpg" alt="Education 1">
+                <img src="./img/12.jpg" alt="Education 1">
+                <img src="./img/13.jpg" alt="Education 1">
+                <img src="./img/14.jpg" alt="Education 1">
+                <img src="./img/15.jpg" alt="Education 1">
+                <img src="./img/16.jpg" alt="Education 1">
+                <img src="./img/17.jpg" alt="Education 1">
+                <img src="./img/18.jpg" alt="Education 1">
+                <img src="./img/19.jpg" alt="Education 1">
+                <img src="./img/45.jpg" alt="Education 1">
+                <img src="./img/46.jpg" alt="Education 1">
+                <img src="./img/47.jpg" alt="Education 1">
+                <img src="./img/49.jpg" alt="Education 1">
+                <img src="./img/52.jpg" alt="Education 1">
+            </div>
+            <div class="tab-pane" id="party">
+                <img src="./img/33.jpg" alt="Education 1">
+                <img src="./img/34.jpg" alt="Education 1">
+                <img src="./img/35.jpg" alt="Education 1">
+                <img src="./img/36.jpg" alt="Education 1">
+                <img src="./img/43.jpg" alt="Education 1">
+                <img src="./img/42.jpg" alt="Education 1">
+            </div>
+        </div>
+
+
+
+        <!-- Respect Teachers Section -->
+<section class="respect-teachers-section">
+    <div class="respect-teachers-container">
+        <h2>Respect Our Teachers</h2>
+        <div class="teacher-card">
+            <img src="./img/37.jpg" alt="Sir Sadat">
+            <div class="teacher-info">
+                <h3>Sir Sadat</h3>
+                <p>With a passion for teaching and a commitment to student success, Sir Sadat inspires and motivates his students to reach their full potential.</p>
+            </div>
+        </div>
+        <div class="teacher-card">
+            <img src="./img/ali.jpg" alt="Sir Ali">
+            <div class="teacher-info">
+                <h3>Sir Ali</h3>
+                <p>Sir Ali brings a wealth of knowledge and a caring attitude to the classroom, creating a nurturing environment for all students to thrive.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h2>Contact Us</h2>
+            <p>For inquiries or more information, feel free to reach out to us:</p>
+            <p><strong>Phone:</strong> <a href="tel:+0922520574">0922520574</a></p>
+            <p> <i class="fa-brands fa-whatsapp"></i> <strong>WhatsApp:  </strong>  <a href="https://wa.me/0922520574" target="_blank">Chat with us</a></p>
+        </div>
+        <div class="footer-social">
+            <h2>Follow Us</h2>
+            <ul class="social-links">
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+                <li><i class="fa-brands fa-linkedin"></i></li>
+            </ul>
+        </div>
+        <div class="footer-details">
+            <p>&copy; 2024 Al Badar Public School. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+
+        
+
+        <script>
+     document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.getAttribute('data-tab');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            panes.forEach(pane => {
+                if (pane.id === target) {
+                    pane.style.display = 'flex'; // Show the selected tab content
+                } else {
+                    pane.style.display = 'none'; // Hide other tab content
+                }
+            });
+        });
+    });
+
+    // Initialize the first tab
+    buttons[0].click();
+});
+
+
+        </script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+    AOS.init();
+  </script>
+
+
+
+</body>
+
+</html>

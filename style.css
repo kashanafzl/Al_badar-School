@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+/* Existing CSS */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(126, 114, 114, 0.7);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.menu-icon::before {
+    content: '\2630'; /* Unicode for hamburger icon */
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust as necessary */
+        right: 0;
+        background-color: rgba(126, 114, 114, 0.7);
+        width: 100%;
+        padding: 10px 0;
+    }
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .nav-menu li a {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container h1 {
+        font-size: 3rem;
+        left: 38%;
+    }
+
+    .mainaboutdiv {
+        padding: 5rem;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-container h1 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 5rem;
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+}
+
+.mainaboutdiv {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 120px;
+    padding-inline: 40px;
+}
+
+.aboutimg {
+    flex: 1;
+    position: relative;
+}
+
+.aboutimg img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+}
+
+#overlay-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.8; /* Adjust opacity as needed */
+    border-radius: 10px;
+}
+
+.allcontent {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.allcontent h4 {
+    font-size: 2rem;
+    color: #274488;
+}
+
+.allcontent p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    padding-block: 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 120px;
+    padding-inline: 40px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: 1s;
+}
+
+.card:hover {
+    cursor: pointer;
+    margin-top: -30px;
+    transition: 1s;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 0.875rem;
+    text-align: center;
+    color: #666;
+}
+
+.tabs-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ebecee;
+    padding: 10px 0;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    background: transparent;
+    border-radius: 3px;
+}
+
+.tab-button.active, .tab-button:hover {
+    background-color: white;
+    color: #274488;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-pane img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+
+/* Respect Teachers Section */
+.respect-teachers-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+}
+
+.respect-teachers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.respect-teachers-section h2 {
+    font-size: 2.5rem;
+    color: #274488;
+    margin-bottom: 40px;
+}
+
+.teacher-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: scale(1.05);
+}
+
+.teacher-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.teacher-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.teacher-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #274488;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-info {
+    margin-bottom: 20px;
+}
+
+.footer-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.footer-info a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links li {
+    display: inline;
+}
+
+.social-links a {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-details {
+    font-size: 0.875rem;
+}
+
+.footer-details p {
+    margin: 5px 0;
+}
+
+.footer-details a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.footer-details a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Design for Teachers Section */
+@media (max-width: 768px) {
+    .teacher-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .teacher-card img {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .mainaboutdiv {
+        flex-direction: column;
+    }
+
+    .aboutimg, .allcontent {
+        padding: 10px;
+    }
+
+    .aboutimg img {
+        max-width: 100%;
+    }
+
+    #overlay-video {
+        max-width: 100%;
+    }
+
+    .cards-container {
+        padding: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-container h1 {
+        font-size: 3rem;
+        left: 10%;
+    }
+
+    .mainaboutdiv {
+        padding: 20px;
+    }
+
+    .allcontent h4 {
+        font-size: 1.5rem;
+    }
+
+    .allcontent p {
+        font-size: 0.875rem;
+        padding-top: 12rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .video-container h1 {
+        font-size: 3rem;
+        left: 38%;
+    }
+
+    .mainaboutdiv {
+        padding: 5rem;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
